@@ -40,8 +40,8 @@ namespace SeleniumWebDriver
             viewAndApply.Click();
 
             //Assert
-            var careersArticle = driver.FindElement(By.ClassName("vacancy-details-23__job-title"));
-            Assert.That(careersArticle.Text, Does.Contain(searchText));
+            var careersArticle = driver.FindElement(By.ClassName("vacancy-details-23__job-title")).Text;
+            Assert.That(careersArticle, Does.Contain(searchText));
         }
 
         //Arange
