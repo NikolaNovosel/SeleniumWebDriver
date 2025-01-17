@@ -1,5 +1,6 @@
 ﻿using NUnit.Framework;
 using OpenQA.Selenium;
+using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Edge;
 using OpenQA.Selenium.Firefox;
 using OpenQA.Selenium.Interactions;
@@ -57,20 +58,20 @@ namespace SeleniumWebDriver
             driver.Navigate().GoToUrl("https://www.epam.com/");
             var magnifier = driver.FindElement(By.CssSelector("span.header-search__search-icon"));
             magnifier.Click();
-            var searchStringParent = driver.FindElement(By.ClassName("header-search__panel"));
-            var searchString = searchStringParent.FindElement(By.Name("q"));
-            searchString.SendKeys(keyword);
-            var findButton = driver.FindElement(By.CssSelector("div.search-results__input-holder+button"));
-            findButton.Click();
+            var searchParent = driver.FindElement(By.ClassName("header-search__panel"));
+            var search = searchParent.FindElement(By.Name("q"));
+            search.SendKeys(keyword);
+            var find = driver.FindElement(By.CssSelector("div.search-results__input-holder+button"));
+            find.Click();
             var lastLink = driver.FindElement(By.XPath("//div[@class='search-results__items']/article[last()]"));
             actions.ScrollByAmount(0, lastLink.Location.Y).Perform();
 
             //Assert
-            bool checkLastLink = driver.FindElement(By.XPath("//div[@class='search-results__items']/article[20]")).Displayed;
+            bool isLastLinkDisplayed = driver.FindElement(By.XPath("//div[@class='search-results__items']/article[20]")).Displayed;
             var links = driver.FindElements(By.XPath("//div[@class='search-results__items']//article/h3/a"));
-            var linksKeywordCount = links.Count(link => link.Text.Contains(keyword, StringComparison.OrdinalIgnoreCase));
-            Assert.That(linksKeywordCount != links.Count, Is.True);
-            Assert.That(checkLastLink, Is.True);
+            var keywordLinkCount = links.Count(link => link.Text.Contains(keyword, StringComparison.OrdinalIgnoreCase));
+            Assert.That(keywordLinkCount != links.Count, Is.True);
+            Assert.That(isLastLinkDisplayed, Is.True);
         }
     }
 }
