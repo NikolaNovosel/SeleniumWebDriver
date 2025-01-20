@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SeleniumWebDriver")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8f88611d35b0b718d33d66dbf5da3eb80c77bf00")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+548f9189f0967eafa556701e87e0f3ed064eb0b5")]
 [assembly: System.Reflection.AssemblyProductAttribute("SeleniumWebDriver")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SeleniumWebDriver")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
