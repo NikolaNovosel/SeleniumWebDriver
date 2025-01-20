@@ -14,12 +14,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 4,
           "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{e1b7d1f8-9b3c-49b1-8f4f-bfc63a88835d}"
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
@@ -29,6 +25,14 @@
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
             },
             {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{e1b7d1f8-9b3c-49b1-8f4f-bfc63a88835d}"
+            },
+            {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "EpamPage.Tests.cs",
@@ -36,9 +40,9 @@
               "RelativeDocumentMoniker": "SeleniumWebDriver\\EpamPage.Tests.cs",
               "ToolTip": "C:\\Users\\DELL\\IdeaProjects\\SeleniumWebDriver\\SeleniumWebDriver_git\\SeleniumWebDriver\\EpamPage.Tests.cs",
               "RelativeToolTip": "SeleniumWebDriver\\EpamPage.Tests.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAAAgwC0AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAADMAAAAAAAAAAAAgwEcAAAB0AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-17T14:25:26.584Z",
+              "WhenOpened": "2025-01-20T10:10:24.135Z",
               "EditorCaption": ""
             }
           ]

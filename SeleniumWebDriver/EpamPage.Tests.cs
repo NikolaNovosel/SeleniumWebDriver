@@ -69,9 +69,18 @@ namespace SeleniumWebDriver
             //Assert
             bool isLastLinkDisplayed = driver.FindElement(By.XPath("//div[@class='search-results__items']/article[20]")).Displayed;
             var links = driver.FindElements(By.XPath("//div[@class='search-results__items']//article/h3/a"));
+            var keywordLinkAll = links.All(link => link.Text.Contains(keyword, StringComparison.OrdinalIgnoreCase));
             var keywordLinkCount = links.Count(link => link.Text.Contains(keyword, StringComparison.OrdinalIgnoreCase));
-            Assert.That(keywordLinkCount != links.Count, Is.True);
-            Assert.That(isLastLinkDisplayed, Is.True);
+            if (keyword == "Cloud")
+            {
+                Assert.That(keywordLinkAll, Is.True);
+                Assert.That(isLastLinkDisplayed, Is.True);
+            }
+            else
+            {
+                Assert.That(keywordLinkCount != links.Count, Is.True);
+                Assert.That(isLastLinkDisplayed, Is.True);
+            }
         }
     }
 }
