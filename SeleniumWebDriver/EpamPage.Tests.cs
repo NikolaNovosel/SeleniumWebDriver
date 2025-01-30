@@ -10,12 +10,12 @@ namespace SeleniumWebDriver
     public class EpamPageTests
     {
         //Arrange
-        [TestCase("C#")]
+        [TestCase(".NET")]
         public void TestCase1(string searchText)
         {
             // Setup EdgeDriver
             using var driver = new EdgeDriver();
-            var wait = new WebDriverWait(driver, TimeSpan.FromSeconds(5));
+            var wait = new WebDriverWait(driver, TimeSpan.FromSeconds(10));
             driver.Manage().Window.Maximize();
             driver.Navigate().GoToUrl("https://www.epam.com/");
 
